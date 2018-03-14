@@ -1,4 +1,4 @@
-# docker-bamboo-server
+# docker-bamboo-server with rancher
 Atlassian Bamboo in a Docker container with docker side by side
 
 Big Thanks to isso: https://github.com/cptactionhank/docker-atlassian-bamboo/issues/11

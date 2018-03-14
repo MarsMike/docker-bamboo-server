@@ -1,0 +1,21 @@
+version: '2'
+services:
+  bamboo-server:
+    image: marsmike/docker-bamboo-server
+    environment:
+      BAMBOO_VERSION: 6.4.0
+      JAVA_OPTS: -Xmx2048m
+      TZ: Europe/Berlin
+      X_PROXY_NAME: bamboo.objektarium.de
+      X_PROXY_PATH: /
+      X_PROXY_PORT: '443'
+      X_PROXY_SCHEME: https
+      DOCKER_GID: '994'
+    stdin_open: true
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /srv/bamboo/data:/var/atlassian/bamboo
+    - /srv/bamboo/logs:/opt/atlassian/bamboo/logs
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always

@@ -39,7 +39,9 @@ Many thanks to @cguentherTUChemnitz for providing the base work for this.
 
 
 Mounting Volumes in Bamboo: Ensure the host has the exact path to dockerized bamboo:
+```
 sudo ln -s /srv/bamboo/data /var/atlassian/bamboo 
+```
 
 
 

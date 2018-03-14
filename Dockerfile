@@ -1,5 +1,5 @@
 FROM cptactionhank/atlassian-bamboo:latest
-ARG DOCKER_GID
+ARG DOCKER_GID=994
 USER root
 RUN apk add --no-cache git-lfs shadow docker
 
